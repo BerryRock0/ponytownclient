@@ -90,7 +90,6 @@ let intervalId;
   speedButton.style.cursor
   speedButton.style.borderRadius
   panelContainer.appendChild(speedButton);
-  
 
   let isAntiafkActive = false;
   let isAutoWriterActive = false;
@@ -304,6 +303,7 @@ function sendMessage(statsText) {
   autoWriterButton.addEventListener('click', toggleAutoWriter);
   antiafkButton.addEventListener('click', toggleAntiafk);
   autoClickerButton.addEventListener('click', toggleAutoClicker);
+  speedButton.addEventListener('click', toggleSpeed);
 
 
 }());
