@@ -80,16 +80,30 @@ let intervalId;
   autoClickerButton.style.borderRadius = '4px';
   panelContainer.appendChild(autoClickerButton);
 
+  const speedButton = document.createElement('button');
+  speedButton.textContext = 'SPEED';
+  speedButton.style.backgroundColor
+  speedButton.style.color = 
+  speedButton.style.padding = 
+  speedButton.style.marginRight
+  speedButton.style.border
+  speedButton.style.cursor
+  speedButton.style.borderRadius
+  panelContainer.appendChild(speedButton);
+  
+
   let isAntiafkActive = false;
   let isAutoWriterActive = false;
   let isAutoClickerActive = false;
+  let isSpeedActive = false; 
   let intervalIdAutoWriter;
 
   antiafkButton.addEventListener('click', toggleAntiafk);
   autoWriterButton.addEventListener('click', toggleAutoWriter);
   autoClickerButton.addEventListener('click', toggleAutoClicker);
+  speedButton.addEventListener('click', toggleSpeed);
 
-    const overlay = document.getElementById('overlay');
+  const overlay = document.getElementById('overlay');
   if (overlay) {
     overlay.style.pointerEvents = 'none';
     overlay.style.display = 'block';
@@ -139,6 +153,15 @@ let intervalId;
     }, 1000);
   }
 
+function toggleSpeed()
+{
+  window.requestAnimationFrame = function(callback)
+  {
+    window.requestAnimationFrame(callback);
+    return window.requestAnimationFrame(callback);
+  };
+}
+  
   function toggleAutoClicker()
   {
     isAutoClickerActive = !isAutoClickerActive;
