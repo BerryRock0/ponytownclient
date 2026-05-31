@@ -100,7 +100,7 @@ let intervalId;
   antiafkButton.addEventListener('click', toggleAntiafk);
   autoWriterButton.addEventListener('click', toggleAutoWriter);
   autoClickerButton.addEventListener('click', toggleAutoClicker);
-  speedButton.addEventListener('click', toggleSpeed);
+  speedHackButton.addEventListener('click', toggleSpeedHack);
 
   const overlay = document.getElementById('overlay');
   if (overlay) {
@@ -135,7 +135,9 @@ let intervalId;
       const collectButton = document.querySelector("title= \"Use item / Interact\"");
 
       if (collectButton)
+      {
         collectButton.click();
+      }
   }
 
   function startClicking()
