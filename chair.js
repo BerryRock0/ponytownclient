@@ -162,7 +162,7 @@ function toggleSpeed()
     return window.requestAnimationFrame(callback);
   };
 }
-  
+
   function toggleAutoClicker()
   {
     isAutoClickerActive = !isAutoClickerActive;
