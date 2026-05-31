@@ -80,21 +80,21 @@ let intervalId;
   autoClickerButton.style.borderRadius = '4px';
   panelContainer.appendChild(autoClickerButton);
 
-  const speedButton = document.createElement('button');
-  speedButton.textContext = 'SPEED';
-  speedButton.style.backgroundColor
-  speedButton.style.color = 
-  speedButton.style.padding = 
-  speedButton.style.marginRight
-  speedButton.style.border
-  speedButton.style.cursor
-  speedButton.style.borderRadius
-  panelContainer.appendChild(speedButton);
+  const speedHackButton = document.createElement('button');
+  speedHackButton.textContext = 'SPEEDHACK';
+  speedHackButton.style.backgroundColor = 'black';
+  speedHackButton.style.color = 'green';
+  speedHackButton.style.padding = '8px 12px';
+  speedHackButton.style.marginRight = '0px';
+  speedHackButton.style.border = 'none';
+  speedHackButton.style.cursor = 'pointer';
+  speedHackButton.style.borderRadius = '4px';
+  panelContainer.appendChild(speedHackButton);
 
   let isAntiafkActive = false;
   let isAutoWriterActive = false;
   let isAutoClickerActive = false;
-  let isSpeedActive = false; 
+  let isSpeedHackActive = false;
   let intervalIdAutoWriter;
 
   antiafkButton.addEventListener('click', toggleAntiafk);
@@ -173,6 +173,18 @@ function toggleSpeed()
     {
         autoClickerButton.classList.remove('active');
         console.log('AUTOCLICKER false');
+    }
+  }
+
+  function toggleSpeedHack() {
+    isSpeedHackActive = !isSpeedHackActive;
+    if(isSpeedHackActive)
+    {
+        speedHackButton.classList.add('active');
+    }
+    else
+    {
+        speedHackButton.classList.remove('active');
     }
   }
 
@@ -303,7 +315,6 @@ function sendMessage(statsText) {
   autoWriterButton.addEventListener('click', toggleAutoWriter);
   antiafkButton.addEventListener('click', toggleAntiafk);
   autoClickerButton.addEventListener('click', toggleAutoClicker);
-  speedButton.addEventListener('click', toggleSpeed);
-
+  speedHackButton.addEventListener('click', toggleSpeedHack);
 
 }());
